@@ -212,7 +212,64 @@
                             </div>
                         </div>
                     </div>
+                    <div class="swiper-slide">
+                        <div class="comment-item">
+                            <div class="comment-item-user">
+                                <img src="images/user01.jpg" alt="user">
+                            </div>
+                            <p>原來聊天機器人可以這麼有人性！團隊有完整的行銷計畫提供數位整合，讓我們公司的產品用更活潑的方式讓使用者認識。</p>
+                            <hr>
+                            <h6>清心寡慾設計公司</h6>
+                            <div class="comment-detail">
+                                <p>Lina 執行長</p>
+                                <div class="star">
+                                    <img src="images/icon_star.svg" alt="">
+                                    <img src="images/icon_star.svg" alt="">
+                                    <img src="images/icon_star.svg" alt="">
+                                    <img src="images/icon_star.svg" alt="">
+                                    <img src="images/icon_star.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="comment-item">
+                            <div class="comment-item-user">
+                                <img src="images/user02.jpg" alt="user">
+                            </div>
+                            <p>團隊很積極的協助行銷追蹤，針對機器人進行優化，讓我們一個月內提高10000個追蹤者，客戶體驗回饋很正面！</p>
+                            <hr>
+                            <h6>subwhat 行銷公司</h6>
+                            <div class="comment-detail">
+                                <p>Zoe 活動長</p>
+                                <div class="star">
+                                    <img src="images/icon_star.svg" alt="">
+                                    <img src="images/icon_star.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="swiper-slide">
+                        <div class="comment-item">
+                            <div class="comment-item-user">
+                                <img src="images/user03.jpg" alt="user">
+                            </div>
+                            <p>經營了好久的IG，一直無法提升粉絲數，和團隊合作後，才知道可以用聊天機器人玩這麼豐富的行銷活動！太讚拉～</p>
+                            <hr>
+                            <h6>油土伯</h6>
+                            <div class="comment-detail">
+                                <p>HowBig</p>
+                                <div class="star">
+                                    <img src="images/icon_star.svg" alt="">
+                                    <img src="images/icon_star.svg" alt="">
+                                    <img src="images/icon_star.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                
                 <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>        
             </div>           
@@ -248,17 +305,33 @@
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script type="module">
         const swiper = new Swiper('.swiper', {
-            // Optional parameters
-            // direction: 'vertical',
-            loop: true,
-            speed: 3000,
-            autoplay:true,
-            slidesPerView: 3,
-            // If we need pagination
-            pagination: {
-                el: '.swiper-pagination',
+            /*  預設要顯示幾個卡片 */
+            slidesPerView: 1,
+            
+            /* 斷點設定 */
+            breakpoints: {
+                /* 螢幕寬度大於等於 992px 時切換為 3 欄 */
+                992: {
+                slidesPerView: 3
+                },
+                /* 螢幕寬度大於等於 768px 時切換為 2 欄 */
+                768: {
+                slidesPerView: 2
+                },
+                /* 更小時都顯示 1 欄 */
+                0: {
+                slidesPerView: 1
+                }
             },
-        });
+            /* 卡片元素的間隔 */
+            spaceBetween: 16,
+            pagination: {
+                /* 想將分頁圓點綁在哪個 class */
+                el: ".swiper-pagination",
+                /* 將輪播設定為可以點擊分頁圓點來切換圖片 */
+                clickable: true
+            }
+            });
       </script>
 
 </body>
