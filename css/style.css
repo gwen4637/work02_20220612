@@ -448,9 +448,6 @@ index-content
     position: relative;
 }
 .comment-itemlist{
-    /* display: flex;
-    justify-content: space-between;
-    align-items: stretch; */
     margin-top: 100px;
 }
 .comment-item{
@@ -534,13 +531,3 @@ index-content
     margin-bottom: 0;
 }
 
-
-
-/*-------------------------
-page
--------------------------*/
-
-
-/* *{
-    outline: 1px solid #000;
-} */
